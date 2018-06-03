@@ -24,11 +24,11 @@ angular.module('nowaInnowacjaApp')
 
     $scope.calculate = function(textToCalculate)
 		{
-      $scope.md5 = new Hashes.MD5().hex(textToCalculate);
-      $scope.sha1 = new Hashes.SHA1().hex(textToCalculate);
-      $scope.sha256 = new Hashes.SHA256().hex(textToCalculate);
-      $scope.sha512 = new Hashes.SHA512().hex(textToCalculate);
-      $scope.rmd160 = new Hashes.RMD160().hex(textToCalculate);   
+      $scope.md5 = new Hashes.MD5().hex($scope.textToCalculate);
+      $scope.sha1 = new Hashes.SHA1().hex($scope.textToCalculate);
+      $scope.sha256 = new Hashes.SHA256().hex($scope.textToCalculate);
+      $scope.sha512 = new Hashes.SHA512().hex($scope.textToCalculate);
+      $scope.rmd160 = new Hashes.RMD160().hex($scope.textToCalculate);   
     }
 
    // var str = 'This is a sample text!'
