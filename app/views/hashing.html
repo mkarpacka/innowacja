@@ -8,9 +8,9 @@
 			
 				<form name="inputText" ng-submit="calculate(textToCalculate)">
 					<p>
-						<textarea required class="form-control" ng-model="textToCalculate" rows="5" placeholder="Wpisz tekst tutaj"></textarea>
+						<textarea ng-change="calculate(textToCalculate)" required class="form-control" ng-model="textToCalculate" rows="5" placeholder="Wpisz tekst tutaj"></textarea>
 					</p>
-					<input type="submit" value="Oblicz!" class="btn btn-primary btn-lg" >
+					<!-- <input type="submit" value="Oblicz!" class="btn btn-primary btn-lg" > -->
 				</form>
 			
 			</div>
