@@ -1,19 +1,19 @@
 app.controller('NavbarCtrl', ['$scope', function($scope){
     var navbarElementsPL = [
-        {text: 'O', link: '#/about'},
-        {text: 'Autoryzacja', link: '#/authorization'},
-        {text: 'Podstawy', link: '#/basics'},
-        {text: 'Blockchain', link: '#/blockchain'},
-        {text: 'Wybieranie historii', link: '#/choosingHistory'},
-        {text: 'Demo', link: '#/demo'},
-        {text: 'Dystrybucja', link: '#/distribution'},
-        {text: 'Haszowanie', link: '#/hashing'},
-        {text: 'Identyfikacja', link: '#/histories'},
-        {text: 'Identyfikacja', link: '#/indentification'},
-        {text: 'PayingForIntegrity', link: '#/payingForIntegrity'},
-        {text: 'POW', link: '#/proofOfWork'},
-        {text: 'Rebase', link: '#/rebase'},
-        {text: 'Ograniczenia', link: '#/restrictions'},
+        {text: 'About', link: '#/about'},
+        {text: 'authorization', link: '#/authorization'},
+        {text: 'basics', link: '#/basics'},
+        {text: 'blockchain', link: '#/blockchain'},
+        {text: 'choosingHistory', link: '#/choosingHistory'},
+        {text: 'demo', link: '#/demo'},
+        {text: 'distribution', link: '#/distribution'},
+        {text: 'hashing', link: '#/hashing'},
+        {text: 'histories', link: '#/histories'},
+        {text: 'indentification', link: '#/indentification'},
+        {text: 'payingForIntegrity', link: '#/payingForIntegrity'},
+        {text: 'proofOfWork', link: '#/proofOfWork'},
+        {text: 'rebase', link: '#/rebase'},
+        {text: 'restrictions', link: '#/restrictions'},
     ];
     
     $scope.navbarElements = navbarElementsPL;

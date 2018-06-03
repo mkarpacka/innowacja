@@ -1,0 +1,19 @@
+<div class="panel-group container" id="accordion" role="tablist" aria-multiselectable="true">
+    <h2>{{title}}</h2>
+    <p>{{introduction}}</p>
+    <div class="panel panel-default" ng-repeat="element in elements">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" data-target="#{{element.id}}">
+            {{element.title}}
+          </a>
+        </h4>
+      </div>
+      <div id="{{element.id}}" class="panel-collapse collapse" ng-class="$index === 0 ? 'in' : ''" role="tabpanel">
+        <div class="panel-body">
+          {{element.content}}
+        </div>
+      </div>
+    </div>
+
+  </div>
