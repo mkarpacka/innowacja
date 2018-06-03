@@ -8,6 +8,8 @@
  *
  * Main module of the application.
  */
+
+ 
 var app = angular
   .module('nowaInnowacjaApp', [
     'ngAnimate',
@@ -100,3 +102,4 @@ var app = angular
         redirectTo: '/'
       });
   });
+

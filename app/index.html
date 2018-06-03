@@ -9,6 +9,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script type="text/javascript" src="http://cdn.rawgit.com/h2non/jsHashes/master/hashes.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -16,7 +17,7 @@
     <!-- endbuild -->
     <base href="/"></base>
   </head>
-  <body ng-app="nowaInnowacjaApp">
+  <body ng-app="nowaInnowacjaApp" style="height: 100%;">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -25,11 +26,11 @@
 
     <navbar></navbar>
 
-    <div class="container">
+    <div class="h-100 d-inline-block container-fluid">
     <div ng-view=""></div>
     </div>
 
-    <div class="footer">
+    <div class="footer" style="position:absolute; bottom:0;"> 
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
       </div>
@@ -58,6 +59,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/jshashes/hashes.js"></script>
     <!-- endbower  -->
     <!-- endbuild huj -->
 
