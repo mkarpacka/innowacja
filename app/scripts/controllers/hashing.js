@@ -14,7 +14,6 @@ angular.module('nowaInnowacjaApp')
   .controller('HashingCtrl', function ($scope) 
   {
   	$scope.textToCalculate = "";
-   // $scope.output = "";
     $scope.md5 = "";
     $scope.sha1 = "";
     $scope.sha256 = "";
@@ -24,20 +23,15 @@ angular.module('nowaInnowacjaApp')
 
     $scope.calculate = function(textToCalculate)
 		{
-      $scope.md5 = new Hashes.MD5().hex($scope.textToCalculate);
-      $scope.sha1 = new Hashes.SHA1().hex($scope.textToCalculate);
-      $scope.sha256 = new Hashes.SHA256().hex($scope.textToCalculate);
-      $scope.sha512 = new Hashes.SHA512().hex($scope.textToCalculate);
-      $scope.rmd160 = new Hashes.RMD160().hex($scope.textToCalculate);   
+        $scope.md5 = new Hashes.MD5().hex($scope.textToCalculate);
+        $scope.sha1 = new Hashes.SHA1().hex($scope.textToCalculate);
+        $scope.sha256 = new Hashes.SHA256().hex($scope.textToCalculate);
+        $scope.sha512 = new Hashes.SHA512().hex($scope.textToCalculate);
+        $scope.rmd160 = new Hashes.RMD160().hex($scope.textToCalculate);   
     }
 
-   // var str = 'This is a sample text!'
-    //var MD5 = new Hashes.MD5().hex(str) //zaimportowane w headzie z linku (do poprawy)
-    
 
-  	
-
-
+  
 
   });
 
