@@ -81,3 +81,28 @@ body {
     border-bottom: 0;
   }
 }
+
+
+#fixedbuttonRight {
+  position: fixed;
+  bottom: 50%;
+  right: 0px; 
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+  background: #ccc;
+  border: 0;
+}
+
+#fixedbuttonLeft {
+  position: fixed;
+  bottom: 50%;
+  left: 0px; 
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
+  background: #ccc;
+  border: 0;
+}
