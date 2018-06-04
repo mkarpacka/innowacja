@@ -15,8 +15,9 @@
      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#/about">Co to Blockchain?</a></li>
+        <li ng-repeat="element in navbarElements"><a href="{{element.link}}">{{element.text}}</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <!-- <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Więcej<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -25,7 +26,7 @@
             </li>
           </ul>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </nav>
