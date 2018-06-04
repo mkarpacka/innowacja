@@ -1,16 +1,16 @@
 <!-- zrobic, zeby stopka byla na samym dole -->
-<div class="container-fluid">
+<div class="container-fluid" style="margin: 100px;">
 	<div class="row">
 		<div class="col-md-5 col-md-offset-1">
 			<h3>
 					Wpisz dowolny tekst, aby obliczyć jego wartości haszujące dla przykładowych funkcji skrótu
 			</h3>
-			<form name="inputText">
+			<form name="inputText" ng-submit="clear()">
 				<p>
-					<textarea ng-change="calculate(textToCalculate)" required class="form-control" ng-model="textToCalculate" rows="5" placeholder="Wpisz tekst tutaj"></textarea>
+					<textarea id="myText" ng-change="calculate(textToCalculate)" required class="form-control" ng-model="textToCalculate" rows="5" placeholder="Wpisz tekst tutaj"></textarea>
 				</p>
+				<input type="submit" value="Wyczyść" class="btn btn-primary btn-lg" >
 			</form>
-		
 		</div>
 		
 		<div class="col-md-offset-1	col-md-5 col-md-offset-1" style="word-wrap: break-word;">
