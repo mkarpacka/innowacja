@@ -8,7 +8,7 @@ app.controller('NavbarCtrl', ['$scope', function($scope){
         {text: 'demo', link: '#/demo'},
         {text: 'distribution', link: '#/distribution'},
         {text: 'hashing', link: '#/hashing'},
-        {text: 'Hashing Puzzle', link: '#/histories'},
+        {text: 'Hash Puzzle', link: '#/histories'},
         {text: 'indentification', link: '#/indentification'},
         {text: 'payingForIntegrity', link: '#/payingForIntegrity'},
         {text: 'proofOfWork', link: '#/proofOfWork'},
