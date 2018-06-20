@@ -1,23 +1,20 @@
-
 <div class="container-fluid" style="margin: 100px;">
 	<div class="row">
-		<h1 style="text-align: center">
-			Ten program pozwoli Ci na zapoznanie się ze sposobem działanie zagadek haszujących,
-			niezbędnych do poprawnego działanie sieci Blockchain. Dzięki nim, sieć nie jest zalewana
-			blokami, a dodać może je tylko węzęł, który jako pierwszy rozwiązał zagadkę. 
-			Wizualizacja jest uproszczona, ponieważ do obliczenia wartości funckcji skrótu używamy tylko 
-			daty, zmiennej oraz wprowadzonych przez Ciebie danych. Pomijamy indeks bloku oraz wykorzystanie
-			poprzednich bloków.
-		</h1>
-	</br>
-	</br>
+		<h4 style="text-align: center">
+			Ten program pozwoli Ci na zapoznanie się ze sposobem działanie zagadek haszujących, niezbędnych do poprawnego działanie sieci
+			Blockchain. Dzięki nim, sieć nie jest zalewana blokami, a dodać może je tylko węzęł, który jako pierwszy rozwiązał zagadkę.
+			Wizualizacja jest uproszczona, ponieważ do obliczenia wartości funckcji skrótu używamy tylko daty, zmiennej oraz wprowadzonych
+			przez Ciebie danych. Pomijamy indeks bloku oraz wykorzystanie poprzednich bloków.
+		</h4>
+		</br>
+		</br>
 		<div>
-			<h3>
-				Wybierz stopien trudnosci i oblicz zagadke haszującą! Obliczanie dla wartości większej od 6 może chwilę potrwać :) 
-			</h3>
+			<h5>
+				Wybierz stopien trudnosci i oblicz zagadke haszującą! Obliczanie dla wartości większej od 6 może chwilę potrwać :)
+			</h5>
 		</div>
 
-			
+
 		<div class="col-md-5 col-md-offset-1">
 			<form name="inputText" ng-submit="findHashValue()">
 				<p>
@@ -28,22 +25,23 @@
 					</div>
 
 				</p>
-				<input type="submit" value="Oblicz dla poziomu trudności {{difficulty}}" class="btn btn-primary btn-lg" >
+				<input ng-disabled="mining" type="submit" value="Oblicz dla poziomu trudności {{difficulty}}" class="btn btn-primary btn-lg">
+				</br>
+				</br>
+				<!-- <p>
+					<input type="submit" value="Stop" class="btn btn-primary btn-lg">
+					<button type="button" ng-click="stop()" class="btn btn-danger btn-lg" >STOP</button>
+				</p> -->
 			</form>
 		</div>
 
 
-		
 		<div class="col-md-offset-1	col-md-5 col-md-offset-1" style="word-wrap: break-word;">
 			dane = {{data}} </br>
 			zmienna (inkrementowana od 0, krok 1) = {{nonce}} </br>
 			Obliczona wartość funkcji skrótu spełniająca warunek posiadania {{difficulty}} zer na początku = {{result}} </br>
-			data = {{date | date:'yyyy-MM-dd'}}  </br>
+			data = {{date | date:'yyyy-MM-dd'}} </br>
 			difficulty = {{difficulty}}
 		</div>
-	</div>			  
+	</div>
 </div>
-
-
-
-

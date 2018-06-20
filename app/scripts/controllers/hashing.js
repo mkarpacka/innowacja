@@ -9,45 +9,47 @@
  */
 
 
-
 angular.module('nowaInnowacjaApp')
-  .controller('HashingCtrl', function ($scope) 
-  {
-  	$scope.textToCalculate;
-    $scope.md5;;
-    $scope.sha1;
-    $scope.sha256;
-    $scope.sha512;
-    $scope.rmd160;
+  .controller('HashingCtrl', function ($scope) {
+
+    var vm = this;
+
+    vm.md5;
+    vm.sha1;
+    vm.sha256;
+    vm.sha512;
+    vm.rmd160;
 
 
-    window.onload = function() {
-      document.getElementById("myText").focus();
-  };
+    let disableCalulate = true;
 
 
+    $scope.$watch('hashing.textToCalculate', function () {
+      if (!disableCalulate)
+        calculate();
 
-    $scope.calculate = function(textToCalculate)
-		{
-      $scope.md5 = new Hashes.MD5().hex($scope.textToCalculate);
-      $scope.sha1 = new Hashes.SHA1().hex($scope.textToCalculate);
-      $scope.sha256 = new Hashes.SHA256().hex($scope.textToCalculate);
-      $scope.sha512 = new Hashes.SHA512().hex($scope.textToCalculate);
-      $scope.rmd160 = new Hashes.RMD160().hex($scope.textToCalculate);   
+      disableCalulate = false;
+    }, true);
+    
+    let calculate = function () {
+      console.log("function texttocalculate")
+      vm.md5 = new Hashes.MD5().hex(vm.textToCalculate);
+      vm.sha1 = new Hashes.SHA1().hex(vm.textToCalculate);
+      vm.sha256 = new Hashes.SHA256().hex(vm.textToCalculate);
+      vm.sha512 = new Hashes.SHA512().hex(vm.textToCalculate);
+      vm.rmd160 = new Hashes.RMD160().hex(vm.textToCalculate);
     }
 
-    $scope.clear = function()
-    {
-      $scope.textToCalculate = "";
-      $scope.textToCalculate = "";
-      $scope.md5 = "";
-      $scope.sha1 = "";
-      $scope.sha256 = "";
-      $scope.sha512 = "";
-      $scope.rmd160 = "";	
+    vm.clear = function () {
+      vm.textToCalculate = "";
+      vm.md5 = "";
+      vm.sha1 = "";
+      vm.sha256 = "";
+      vm.sha512 = "";
+      vm.rmd160 = "";
+      disableCalulate = true;
+      console.log('txt: ' + vm.textToCalculate);
     }
-
-
 
 
   });

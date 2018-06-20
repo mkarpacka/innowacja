@@ -1,25 +1,26 @@
-<!-- zrobic, zeby stopka byla na samym dole -->
+
+
 <div class="container-fluid" style="margin: 100px;">
 	<div class="row">
 		<div class="col-md-5 col-md-offset-1">
 			<h3>
 					Wpisz dowolny tekst, aby obliczyć jego wartości haszujące dla przykładowych funkcji skrótu
 			</h3>
-			<form name="inputText" ng-submit="clear()">
+			<form name="inputText" ng-submit="hashing.clear()">
 				<p>
-					<textarea id="myText" ng-change="calculate(textToCalculate)" required class="form-control" ng-model="textToCalculate" rows="5" placeholder="Wpisz tekst tutaj"></textarea>
+					<textarea id="myText"  required class="form-control" ng-model="hashing.textToCalculate" rows="5" placeholder="Wpisz tekst tutaj"></textarea>
 				</p>
-				<input type="submit" value="Wyczyść" class="btn btn-primary btn-lg" >
+				<input ng-disabled="!hashing.textToCalculate" type="submit" value="Wyczyść" class="btn btn-primary btn-lg" >
 			</form>
 		</div>
 		
 		<div class="col-md-offset-1	col-md-5 col-md-offset-1" style="word-wrap: break-word;">
 			<h2>Wyniki prezentowane są w systemie szensastkowym.</h2>
-			<h3><b>MD5:</b> <p>{{md5}}</p></h3>
-			<h3><b>SHA1:</b> <p>{{sha1}}</p></h3>
-			<h3><b>SHA256:</b> <p>{{sha256}}</p></h3>
-			<h3><b>SHA512:</b> <p>{{sha512}}</p></h3>
-			<h3><b>RIPEMD:</b> <p>{{rmd160}}</p></h3>
+			<h3><b>MD5:</b> <p>{{hashing.md5}}</p></h3>
+			<h3><b>SHA1:</b> <p>{{hashing.sha1}}</p></h3>
+			<h3><b>SHA256:</b> <p>{{hashing.sha256}}</p></h3>
+			<h3><b>SHA512:</b> <p>{{hashing.sha512}}</p></h3>
+			<h3><b>RIPEMD:</b> <p>{{hashing.rmd160}}</p></h3>
 		</div>
 	</div>			  
 </div>
