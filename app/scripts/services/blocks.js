@@ -17,7 +17,7 @@ app.provider('blocks', function () {
   this.$get = ['$http', function ($http) {
     var blocksService = {};
 
-    blocksService.getBlocks = function () {
+    blocksService.getAllBlocks = function () {
       return $http.get(API_URL + '/blocks');
     }
 
@@ -29,5 +29,5 @@ app.provider('blocks', function () {
 
     return blocksService;
   }];
-  f
+  
 });

@@ -1,1 +1,11 @@
-<p>This is the demo view.</p>
+<div class="container">
+    <h1>Tutaj możesz zobaczyć jak dodawane są poszczególne bloki do całego łańcucha</h1>
+    <div class="input-group">
+        <input ng-keyup="$event.keyCode == 13 && addBlock()" ng-model="blockContent" class="form-control" placeholder="Tu wpisz zawartosc bloku">
+        <button class="btn btn-default" ng-click="addBlock()">Dodaj</button>
+    </div>
+
+    <div class="panel panel-default" ng-repeat="b in blocks" style="margin: 0;">
+        <p>{{b.content}}</p>
+    </div>      
+</div>
