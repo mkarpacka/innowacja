@@ -19,7 +19,7 @@ var app = angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider, fetchDataProvider, blocksProvider) {
     $locationProvider.hashPrefix('');
 
     $routeProvider
@@ -101,5 +101,8 @@ var app = angular
       .otherwise({
         redirectTo: '/'
       });
+
+      fetchDataProvider.config('https://calm-chamber-63512.herokuapp.com'); //konfiguracja url api
+      blocksProvider.config('https://calm-chamber-63512.herokuapp.com');
   });
 
