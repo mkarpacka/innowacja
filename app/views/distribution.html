@@ -1,20 +1,20 @@
 <div class="jumbotron">
     <div class="container">
         <h2><b>Przykład wykorzystania funkcji skrótu.</b></h2>
-        <p>Funkcje haszujące, inaczej funkcje skrótu, pozwalają na zamianę dowolnej długości ciągu znaków
-            w krótką wartość o stałym rozmiarze, tzw. <var>skrót nieodwracalny</var> 
-        </p>
         <p>
-            W teorii możliwe jest aby dwa różne argumenty wejściowe posiadały tę samą wartość funckji, jednak 
-            jest na to bardzo mała szansa.
+            Funkcje Haszujące mogą być wykorzystane do szybszego porównywania dokumentów
+            znaczących rozmiarów. Dzięki temu zamiast porównywać każdy znak, możemy
+            obliczyć wartości funkcji skrótu dla obu plików i zestawić ze sobą
+            znacznie krótsze sygnatury.
         </p>
-
-        <p>Poniższa aplikacja wizualizuje odporność na kolizje funkcji SHA-256.</p>
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="alert alert-info " role="alert">Pole nr 1</div>
+<div class="container text-center">
+    <div class="alert alert-info lead" role="alert">Wprowadź dowolne dane w wyznaczonych miejscach
+        aby zapoznać się z ideą porównywania dokumentów poprzez ich wartości funkcji.
+    </div>
+</br>
 </div>
 
 <div class="container-fluid">
@@ -22,19 +22,20 @@
       <div class="col-lg-4">
         <form name="inputFirst">
             <p>
-                <div class="alert alert-info" role="alert">Pole nr 1</div>
+                  <!-- <small >Pole nr 1</small> -->
                 <textarea id="data1" class="form-control" ng-model="distribution.data1" rows="25" placeholder="Dane"></textarea>
             </p>
         </form>
       </div>
       <div class="col-lg-4 " style="word-wrap: break-word;">
+     
           <h2 class="text-center">Sha-256</h2>
-          <h3>Pole nr 1</h3>
+          <h3>Wynik 1</h3>
           <h4 ng:class="{true:'text-success font-weight-bold', false:''}[distribution.result1==distribution.result2]">
                 {{distribution.result1}}
           </h4>
-       </br>
-        <h3>Pole nr 2</h3>
+          
+       <h3>Wynik 2</h3>
         <h4 ng:class="{true:'text-success', false:''}[distribution.result1==distribution.result2]">
                 {{distribution.result2}}
           </h4>
@@ -42,7 +43,7 @@
       <div class="col-lg-4">
         <form name="inputFirst">
             <p>
-                <div class="alert alert-info" role="alert">Pole nr 2</div>
+                <!-- <div class="alert alert-info" role="alert">Pole nr 2</div> -->
                 <textarea id="myText" class="form-control" ng-model="distribution.data2" rows="25" placeholder="Dane"></textarea>
             </p>
         </form>
