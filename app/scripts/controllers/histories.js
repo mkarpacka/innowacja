@@ -54,8 +54,11 @@ class Block {
 
 
 
-angular.module('nowaInnowacjaApp')
+var app = angular.module('nowaInnowacjaApp')
     .controller('HistoriesCtrl', function ($scope) {
+
+
+
 
         $scope.nonce;
         $scope.result;
@@ -90,3 +93,31 @@ angular.module('nowaInnowacjaApp')
 
     });
 
+
+    
+    app.filter('boldZeros', function() {
+        return function(x) {
+            var i, c, txt = "";
+            let flag = true;
+            if(x)
+            {
+                for (i = 0; i < x.length; i++) {
+                    c = x[i];
+                    if (c === '0' && flag) 
+                    {
+                        c = c.bold();
+                    }
+                    else
+                    {
+                        //todo: append rest of string and return
+                        flag = false
+                    }
+
+
+                    txt += c;
+                    
+                }
+                return txt;
+            }
+        };
+    });

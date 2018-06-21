@@ -1,27 +1,54 @@
+<div class="jumbotron">
+	<div class="container">
+		<h1>Jak dowieść poświęceniu zasobów obliczeniowych?</h1>
+		<p>Działanie Hash-Puzzle można porównać do klasycznych puzzli. Ich rozwiązanie wymaga niekiedy kilku godzin wytężonej pracy,
+			jednak wystarczy rzut oka aby ocenić czy zostały ułożone poprawnie.
+		</p>
+
+		<p>Poniższa aplikacja pozwoli Ci na zapoznanie się ze sposobem działania zagadek Hash-Puzzle niezbędnych do poprawnego funkcjonowania
+			struktury Blockchain. Dzięki nim sieć nie jest stale zalewana nowymi blokami, lecz dodać może je tylko węzęł, który jako
+			pierwszy rozwiązał zagadkę. Pozostałe hosty mogą z łatwością zweryfikować poprawność uzyskanego wyniku.</p>
+		<p>Wizualizacja zawiera pewne uproszczenia, ponieważ do obliczenia wartości funckcji skrótu używamy tylko daty, zmiennej oraz
+			wprowadzonych przez Ciebie danych. Pomijamy indeks bloku oraz informacje zawarte w poprzednich blokach.</p>
+		</p>
+	</div>
+</div>
+
+
+
+
+
+
+
+
 <div class="container-fluid" style="margin: 100px;">
 	<div class="row">
 		<h4 style="text-align: center">
-			Ten program pozwoli Ci na zapoznanie się ze sposobem działanie zagadek haszujących, niezbędnych do poprawnego działanie sieci
-			Blockchain. Dzięki nim, sieć nie jest zalewana blokami, a dodać może je tylko węzęł, który jako pierwszy rozwiązał zagadkę.
-			Wizualizacja jest uproszczona, ponieważ do obliczenia wartości funckcji skrótu używamy tylko daty, zmiennej oraz wprowadzonych
-			przez Ciebie danych. Pomijamy indeks bloku oraz wykorzystanie poprzednich bloków.
+
 		</h4>
 		</br>
 		</br>
-		<div>
+		<!-- <div>
 			<h5>
 				Wybierz stopien trudnosci i oblicz zagadke haszującą! Obliczanie dla wartości większej od 6 może chwilę potrwać :)
 			</h5>
-		</div>
+		</div> -->
+
+
 
 
 		<div class="col-md-5 col-md-offset-1">
+
+
+
+
 			<form name="inputText" ng-submit="findHashValue()">
 				<p>
+					<div class="alert alert-info" role="alert">Wybierz ilość poprzedzających zer i oblicz zagadkę!</div>
 					<textarea id="myText" class="form-control" ng-model="data" rows="5" placeholder="Dane"></textarea>
 					<div style="float: right;">
-						wybierz trudnosc
-						<select ng-model="difficulty" ng-options="x for x in difficulties" style="float: right;"></select>
+						Wybierz poziom trudności
+						<select class="form-control" ng-model="difficulty" ng-options="x for x in difficulties" style="float: right;"></select>
 					</div>
 
 				</p>
@@ -36,12 +63,29 @@
 		</div>
 
 
-		<div class="col-md-offset-1	col-md-5 col-md-offset-1" style="word-wrap: break-word;">
-			dane = {{data}} </br>
-			zmienna (inkrementowana od 0, krok 1) = {{nonce}} </br>
-			Obliczona wartość funkcji skrótu spełniająca warunek posiadania {{difficulty}} zer na początku = {{result}} </br>
-			data = {{date | date:'yyyy-MM-dd'}} </br>
-			difficulty = {{difficulty}}
+		<div class="col-md-offset-1	col-md-5 col-md-offset-1 well" style="word-wrap: break-word;">
+			<p>
+				<samp>dane = </samp>
+				<var>{{data}}</var>
+			</p>
+
+			<p>
+				<samp>Próby = </samp>
+				<var> {{nonce}}</var>
+			</p>
+
+			<p><samp>Obliczona wartość funkcji skrótu = </samp>
+			<var ng-bind-html="result | boldZeros: difficulty"></var>
+			</p>
+			<p>
+			<samp>Dzisiejsza data = </samp>
+			<var >{{date | date:'yyyy-MM-dd'}}</var>
+			</p>
+
+			<p>
+			<samp>Poziom trudności = </samp>
+			<var>{{difficulty}}</var>
+			</p>
 		</div>
 	</div>
 </div>

@@ -1,12 +1,28 @@
+<div class="jumbotron">
+		<div class="container">
+			<h1>Czym są funkcje haszujące?</h1>
+			<p>Funkcje haszujące, inaczej funkcje skrótu, pozwalają na zamianę dowolnej długości ciągu znaków
+				w krótką wartość o stałym rozmiarze, tzw. <var>skrót nieodwracalny</var> 
+			</p>
+			<p>
+				W teorii możliwe jest aby dwa różne argumenty wejściowe posiadały tę samą wartość funckji, jednak 
+				jest na to bardzo mała szansa.
+			</p>
+	
+			<p>Poniższa aplikacja wizualizuje działanie 5 popularnych funkcji skrótu.</p>
+		</div>
+	</div>
+
 
 
 <div class="container-fluid" style="margin: 100px;">
 	<div class="row">
 		<div class="col-md-5 col-md-offset-1">
 			<h3>
-					Wpisz dowolny tekst, aby obliczyć jego wartości haszujące dla przykładowych funkcji skrótu
+					
 			</h3>
 			<form name="inputText" ng-submit="hashing.clear()">
+					<div class="alert alert-info" role="alert">Wpisz dowolny tekst aby obliczyć jego wartość dla podanych funkcji!</div>
 				<p>
 					<textarea id="myText"  required class="form-control" ng-model="hashing.textToCalculate" rows="5" placeholder="Wpisz tekst tutaj"></textarea>
 				</p>
@@ -16,11 +32,11 @@
 		
 		<div class="col-md-offset-1	col-md-5 col-md-offset-1" style="word-wrap: break-word;">
 			<h2>Wyniki prezentowane są w systemie szensastkowym.</h2>
-			<h3><b>MD5:</b> <p>{{hashing.md5}}</p></h3>
-			<h3><b>SHA1:</b> <p>{{hashing.sha1}}</p></h3>
-			<h3><b>SHA256:</b> <p>{{hashing.sha256}}</p></h3>
-			<h3><b>SHA512:</b> <p>{{hashing.sha512}}</p></h3>
-			<h3><b>RIPEMD:</b> <p>{{hashing.rmd160}}</p></h3>
+			<h3><samp><b>MD5:</b></samp> <p><var>{{hashing.md5}}</var></p></h3>
+			<h3><samp></samp><b>SHA1:</b></samp> <p><var></var>{{hashing.sha1}}</var></p></h3>
+			<h3><samp></samp><b>SHA256:</b></samp> <p><var></var>{{hashing.sha256}}</var></p></h3>
+			<h3><samp></samp><b>SHA512:</b></samp> <p><var></var>{{hashing.sha512}}</var></p></h3>
+			<h3><samp></samp><b>RIPEMD:</b></samp> <p><var></var>{{hashing.rmd160}}</var></p></h3>
 		</div>
 	</div>			  
 </div>
