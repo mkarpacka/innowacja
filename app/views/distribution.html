@@ -1,7 +1,25 @@
+<div class="jumbotron">
+    <div class="container">
+        <h2><b>Przykład wykorzystania funkcji skrótu.</b></h2>
+        <p>Funkcje haszujące, inaczej funkcje skrótu, pozwalają na zamianę dowolnej długości ciągu znaków
+            w krótką wartość o stałym rozmiarze, tzw. <var>skrót nieodwracalny</var> 
+        </p>
+        <p>
+            W teorii możliwe jest aby dwa różne argumenty wejściowe posiadały tę samą wartość funckji, jednak 
+            jest na to bardzo mała szansa.
+        </p>
+
+        <p>Poniższa aplikacja wizualizuje odporność na kolizje funkcji SHA-256.</p>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="alert alert-info " role="alert">Pole nr 1</div>
+</div>
 
 <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-lg-4">
         <form name="inputFirst">
             <p>
                 <div class="alert alert-info" role="alert">Pole nr 1</div>
@@ -9,8 +27,8 @@
             </p>
         </form>
       </div>
-      <div class="col-md-4">
-          <h2>Sha-256</h2>
+      <div class="col-lg-4 " style="word-wrap: break-word;">
+          <h2 class="text-center">Sha-256</h2>
           <h3>Pole nr 1</h3>
           <h4 ng:class="{true:'text-success font-weight-bold', false:''}[distribution.result1==distribution.result2]">
                 {{distribution.result1}}
@@ -21,7 +39,7 @@
                 {{distribution.result2}}
           </h4>
       </div>
-      <div class="col-md-4">
+      <div class="col-lg-4">
         <form name="inputFirst">
             <p>
                 <div class="alert alert-info" role="alert">Pole nr 2</div>
