@@ -9,7 +9,7 @@
  */
 
 //todo: zrobic zeby zmienna sie odrazu wstrzykiwala do widoku :) bedzie fajnei  wygladalo
-
+//todo: nie haszuje danych 
 
 let shouldStop = false;
 
