@@ -23,7 +23,7 @@
         <form name="inputFirst">
             <p>
                   <!-- <small >Pole nr 1</small> -->
-                <textarea id="data1" class="form-control" ng-model="distribution.data1" rows="25" placeholder="Dane"></textarea>
+                <textarea id="data1" class="form-control" ng-model="comparing.data1" rows="25" placeholder="Dane"></textarea>
             </p>
         </form>
       </div>
@@ -31,20 +31,20 @@
      
           <h2 class="text-center">Sha-256</h2>
           <h3>Wynik 1</h3>
-          <h4 ng:class="{true:'text-success font-weight-bold', false:''}[distribution.result1==distribution.result2]">
-                {{distribution.result1}}
+          <h4 ng:class="{true:'text-success font-weight-bold', false:''}[comparing.result1==comparing.result2]">
+                {{comparing.result1}}
           </h4>
           
        <h3>Wynik 2</h3>
-        <h4 ng:class="{true:'text-success', false:''}[distribution.result1==distribution.result2]">
-                {{distribution.result2}}
+        <h4 ng:class="{true:'text-success', false:''}[comparing.result1==comparing.result2]">
+                {{comparing.result2}}
           </h4>
       </div>
       <div class="col-lg-4">
         <form name="inputFirst">
             <p>
                 <!-- <div class="alert alert-info" role="alert">Pole nr 2</div> -->
-                <textarea id="myText" class="form-control" ng-model="distribution.data2" rows="25" placeholder="Dane"></textarea>
+                <textarea id="myText" class="form-control" ng-model="comparing.data2" rows="25" placeholder="Dane"></textarea>
             </p>
         </form>
       </div>
