@@ -2,27 +2,29 @@
 
 /**
  * @ngdoc function
- * @name nowaInnowacjaApp.controller:HistoriesCtrl
+ * @name nowaInnowacjaApp.controller:HashPuzzleCtrl
  * @description
- * # HistoriesCtrl
+ * # HashPuzzleCtrl
  * Controller of the nowaInnowacjaApp
  */
 
-//todo: zrobic zeby zmienna sie odrazu wstrzykiwala do widoku :) bedzie fajnei  wygladalo
-//todo: nie haszuje danych 
+
+//todo: calculate the hash using worker
+
 
 let shouldStop = false;
 
 class Block {
 
-    constructor(date) {
+    constructor(date, additionalData) {
         this.date = date;
+        this.additionalData = additionalData;
         this.hash = this.calculateHash();
-        this.nonce = 0; 
+        this.nonce = 0;
     }
 
     calculateHash() {
-        return new Hashes.SHA256().hex(this.date + this.nonce)
+        return new Hashes.SHA256().hex(this.additionalData + this.date + this.nonce)
     }
 
     mineBlock(difficulty) {
@@ -31,13 +33,11 @@ class Block {
 
 
 
-        while (this.hash.substring(0, difficulty) !== Array(difficulty + 1).join("0")) 
-        {
-            if(shouldStop)
-            {
+        while (this.hash.substring(0, difficulty) !== Array(difficulty + 1).join("0")) {
+            if (shouldStop) {
                 console.log("Mining stopped!!");
-                 shouldStop = false;
-                 //$scope.mining = false;
+                shouldStop = false;
+                //$scope.mining = false;
                 break;
             }
             this.nonce += 1;
@@ -55,9 +55,7 @@ class Block {
 
 
 var app = angular.module('nowaInnowacjaApp')
-    .controller('HistoriesCtrl', function ($scope) {
-
-
+    .controller('HashPuzzleCtrl', function ($scope) {
 
 
         $scope.nonce;
@@ -79,7 +77,7 @@ var app = angular.module('nowaInnowacjaApp')
             // worker.postMessage($scope.data);
 
             console.log("findValue clicked!")
-            let myBlock = new Block($scope.date);
+            let myBlock = new Block($scope.date, $scope.data);
             $scope.mining = true;
             let dataResult = myBlock.mineBlock($scope.difficulty);
             $scope.result = dataResult[0];
@@ -94,30 +92,27 @@ var app = angular.module('nowaInnowacjaApp')
     });
 
 
-    
-    app.filter('boldZeros', function() {
-        return function(x) {
-            var i, c, txt = "";
-            let flag = true;
-            if(x)
-            {
-                for (i = 0; i < x.length; i++) {
-                    c = x[i];
-                    if (c === '0' && flag) 
-                    {
-                        c = c.bold();
-                    }
-                    else
-                    {
-                        //todo: append rest of string and return
-                        flag = false
-                    }
 
-
-                    txt += c;
-                    
+app.filter('boldZeros', function () {
+    return function (x) {
+        var i, c, txt = "";
+        if (x) {
+            for (i = 0; i < x.length; i++) {
+                c = x[i];
+                if (c === '0') {
+                    c = c.bold();
                 }
-                return txt;
+                else {
+                    for (; i < x.length; i++)
+                        txt += x[i];
+
+                    return txt;
+                }
+
+                txt += c;
+
             }
-        };
-    });
+            return txt;
+        }
+    };
+});

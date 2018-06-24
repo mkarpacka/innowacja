@@ -43,10 +43,10 @@ var app = angular
         controller: 'BasicsCtrl',
         controllerAs: 'basics'
       })
-      .when('/histories', {
-        templateUrl: 'views/histories.html',
-        controller: 'HistoriesCtrl',
-        controllerAs: 'histories'
+      .when('/hashPuzzle', {
+        templateUrl: 'views/hashPuzzle.html',
+        controller: 'HashPuzzleCtrl',
+        controllerAs: 'hashPuzzle'
       })
       .when('/hashing', {
         templateUrl: 'views/hashing.html',
@@ -73,10 +73,10 @@ var app = angular
         controller: 'ProofofworkCtrl',
         controllerAs: 'proofOfWork'
       })
-      .when('/distribution', {
-        templateUrl: 'views/distribution.html',
-        controller: 'DistributionCtrl',
-        controllerAs: 'distribution'
+      .when('/comparing', {
+        templateUrl: 'views/comparing.html',
+        controller: 'ComparingCtrl',
+        controllerAs: 'comparing'
       })
       .when('/choosingHistory', {
         templateUrl: 'views/choosinghistory.html',

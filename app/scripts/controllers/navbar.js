@@ -1,14 +1,15 @@
 app.controller('NavbarCtrl', ['$scope', function($scope){
-    var navbarElementsPL = [
+    var vm = this;
+    vm.navbarElementsPL = [
         {text: 'About', link: '#/about'},
         {text: 'Autoryzacja', link: '#/authorization'},
         {text: 'basics', link: '#/basics'},
         {text: 'blockchain', link: '#/blockchain'},
         {text: 'choosingHistory', link: '#/choosingHistory'},
         {text: 'Demo', link: '#/demo'},
-        {text: 'Przykład użycia haszowania', link: '#/distribution'},
+        {text: 'Przykład użycia haszowania', link: '#/comparing'},
         {text: 'Hashing', link: '#/hashing'},
-        {text: 'Hashing-Puzzle', link: '#/histories'},
+        {text: 'Hashing-Puzzle', link: '#/hashPuzzle'},
         {text: 'indentification', link: '#/indentification'},
         {text: 'Opłata za podtrzymanie sieci', link: '#/payingForIntegrity'},
         {text: 'proofOfWork', link: '#/proofOfWork'},
@@ -16,5 +17,5 @@ app.controller('NavbarCtrl', ['$scope', function($scope){
         {text: 'Ograniczenia Blockchaina', link: '#/restrictions'},
     ];
     
-    $scope.navbarElements = navbarElementsPL;
+    
 }]);

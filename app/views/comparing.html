@@ -1,0 +1,52 @@
+<div class="jumbotron">
+    <div class="container">
+        <h2><b>Przykład wykorzystania funkcji skrótu.</b></h2>
+        <p>
+            Funkcje Haszujące mogą być wykorzystane do szybszego porównywania dokumentów
+            znaczących rozmiarów. Dzięki temu zamiast porównywać każdy znak, możemy
+            obliczyć wartości funkcji skrótu dla obu plików i zestawić ze sobą
+            znacznie krótsze sygnatury.
+        </p>
+    </div>
+</div>
+
+<div class="container text-center">
+    <div class="alert alert-info lead" role="alert">Wprowadź dowolne dane w wyznaczonych miejscach
+        aby zapoznać się z ideą porównywania dokumentów poprzez ich wartości funkcji.
+    </div>
+</br>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4">
+        <form name="inputFirst">
+            <p>
+                  <!-- <small >Pole nr 1</small> -->
+                <textarea id="data1" class="form-control" ng-model="comparing.data1" rows="25" placeholder="Dane"></textarea>
+            </p>
+        </form>
+      </div>
+      <div class="col-lg-4 " style="word-wrap: break-word;">
+     
+          <h2 class="text-center">Sha-256</h2>
+          <h3>Wynik 1</h3>
+          <h4 ng:class="{true:'text-success font-weight-bold', false:''}[comparing.result1==comparing.result2]">
+                {{comparing.result1}}
+          </h4>
+          
+       <h3>Wynik 2</h3>
+        <h4 ng:class="{true:'text-success', false:''}[comparing.result1==comparing.result2]">
+                {{comparing.result2}}
+          </h4>
+      </div>
+      <div class="col-lg-4">
+        <form name="inputFirst">
+            <p>
+                <!-- <div class="alert alert-info" role="alert">Pole nr 2</div> -->
+                <textarea id="myText" class="form-control" ng-model="comparing.data2" rows="25" placeholder="Dane"></textarea>
+            </p>
+        </form>
+      </div>
+    </div>
+  

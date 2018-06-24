@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name nowaInnowacjaApp.controller:HistoriesCtrl
+ * @name nowaInnowacjaApp.controller:HashPuzzleCtrl
  * @description
- * # HistoriesCtrl
+ * # HashPuzzleCtrl
  * Controller of the nowaInnowacjaApp
  */
 

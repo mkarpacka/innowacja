@@ -1,23 +1,23 @@
 'use strict';
 
-describe('Controller: HistoriesCtrl', function () {
+describe('Controller: HashPuzzleCtrl', function () {
 
   // load the controller's module
   beforeEach(module('nowaInnowacjaApp'));
 
-  var HistoriesCtrl,
+  var HashPuzzleCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    HistoriesCtrl = $controller('HistoriesCtrl', {
+    HashPuzzleCtrl = $controller('HashPuzzleCtrl', {
       $scope: scope
       // place here mocked dependencies
     });
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(HistoriesCtrl.awesomeThings.length).toBe(3);
+    expect(HashPuzzleCtrl.awesomeThings.length).toBe(3);
   });
 });
