@@ -1,1 +1,17 @@
-<p>This is the about view.</p>
+<h4>Krótka charakterystyka Blokchaina</h4>
+<hr>
+ <!-- In order for custom options please visit: -->
+ <timeline>
+    <timeline-event ng-repeat="text in texts" side="alternate"> 
+     <timeline-badge class="{{text.badgeClass}}">
+        <i class="glyphicon {{text.badgeIconClass}}"></i>
+      </timeline-badge>
+      <timeline-panel class="{{text.badgeClass}}">
+        <timeline-heading>
+          <h4>{{text.title}}</h4>
+        </timeline-heading>
+        <p>{{text.content}}</p>
+      </timeline-panel>
+
+    </timeline-event>
+  </timeline>

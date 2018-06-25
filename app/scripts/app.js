@@ -17,7 +17,8 @@ var app = angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'angular-timeline'
   ])
   .config(function ($routeProvider, $locationProvider, fetchDataProvider, blocksProvider) {
     $locationProvider.hashPrefix('');
