@@ -12,11 +12,11 @@
 
 <!-- Footer -->
 
-<footer class="navbar navbar-default navbar-fixed-bottom" style="background-color: #eee;   margin-top: -50px;;">
+<footer ng-controller="FooterCtrl" class="navbar navbar-default navbar-fixed-bottom" style="background-color: #eee;   margin-top: -50px;;">
     <div class="container" >
       <p class="navbar-text pull-left center-block">
           <i class="fas fa-graduation-cap fa-2x"></i>
-                  © 2018 Ta strona powstała w ramach projektu "Innowacja" pod opieką firmy
+                  © {{myDate | date : 'yyyy'}} Ta strona powstała w ramach projektu "Innowacja" pod opieką firmy
            <a  href="https://ttpsc.pl/" target="_blank" >Transition Technologies PSC</a>
       </p>
     </div>
