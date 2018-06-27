@@ -19,6 +19,10 @@
   <link rel="stylesheet" href="styles/transitions.css">
   <link rel="stylesheet" href="styles/animations.css">
 
+  <!-- Include solid icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
+
 
 
 
@@ -27,7 +31,8 @@
   <base href="/"></base>
 </head>
 
-<body ng-app="nowaInnowacjaApp" style="height: 100%;" ng-cloak>
+<body ng-app="nowaInnowacjaApp" ng-cloak>
+<body ng-app="nowaInnowacjaApp">
   <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -57,31 +62,23 @@
       </div>
     </div> -->
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-          <p class="copyright text-muted">Copyright &copy; Polish Blockchain Wiki 2018</p>
-        </div>
-      </div>
-    </div>
+  <ng-include  src="'views/partials/footer.html'"></ng-include>
+
   </footer>
-
 
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
   <script>
-    ! function (A, n, g, u, l, a, r) {
-      A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
-          (A[l].q = A[l].q || []).push(arguments)
-        }, A[l].l = +new Date, a = n.createElement(g),
-        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    !function (A, n, g, u, l, a, r) {
+    A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+      (A[l].q = A[l].q || []).push(arguments)
+    }, A[l].l = +new Date, a = n.createElement(g),
+      r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
     }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-XXXXX-X');
     ga('send', 'pageview');
-
   </script>
 
   <!-- build:js(.) scripts/vendor.js -->
@@ -119,6 +116,7 @@
   <script src="scripts/controllers/restrictions.js"></script>
   <script src="scripts/controllers/navbar.js"></script>
   <script src="scripts/controllers/sideButtons.js"></script>
+  <script src="scripts/controllers/footer.js"></script>
 
   <script src="scripts/components/navbar.js"></script>
   <script src="scripts/components/sideButtons.js"></script>
