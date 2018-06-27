@@ -1,2 +1,28 @@
-.ng-enter           { animation: slideInLeft 0.5s both ease-in; z-index: 8888; }
-.ng-leave           { animation: slideOutRight 0.5s both ease-in; z-index: 9999; }
+@-webkit-keyframes moveToLeftFade {
+	from { }
+	to { opacity: 0.3; -webkit-transform: translateX(-100%); }
+}
+@keyframes moveToLeftFade {
+	from { }
+	to { opacity: 0.3; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+
+@-webkit-keyframes moveFromRightFade {
+	from { opacity: 0.3; -webkit-transform: translateX(100%); }
+}
+@keyframes moveFromRightFade {
+	from { opacity: 0.3; -webkit-transform: translateX(100%); transform: translateX(100%); }
+}
+
+.ng-enter {
+  -webkit-animation: moveFromRightFade .3s ease both;
+  animation: moveFromRightFade .3s ease both;
+  z-index: 9999;
+}
+
+
+.ng-leave {
+  -webkit-animation: moveToLeftFade .3s ease both;
+  animation: moveToLeftFade .3s ease both;
+  z-index: 8888;
+}

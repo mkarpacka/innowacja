@@ -1,2 +1,3 @@
-<a id="fixedbuttonRight" class="btn btn-danger btn-lg" href="{{nextUrl}}"> > </a>
-<a id="fixedbuttonLeft" class="btn btn-danger btn-lg" href="{{prevUrl}}"> < </a>
+<link rel="stylesheet" ng-href="{{getTransitionInclude()}}">
+<a ng-click="setRightSide()" id="fixedbuttonRight" class="btn btn-danger btn-lg" href="{{nextUrl}}"> > </a>
+<a ng-click="setLeftSide()" id="fixedbuttonLeft" class="btn btn-danger btn-lg" href="{{prevUrl}}"> < </a>

@@ -1,34 +1,38 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Polish Blockchain Wiki</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/angular-timeline/dist/angular-timeline.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/transitions.css">
+
+<head>
+  <meta charset="utf-8">
+  <title>Polish Blockchain Wiki</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/angular-timeline/dist/angular-timeline.css" />
+  <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/transitions.css">
+  <link rel="stylesheet" href="styles/animations.css">
 
 
 
 
 
-    <!-- endbuild -->
-    <base href="/"></base>
-  </head>
-  <body ng-app="nowaInnowacjaApp" style="height: 100%;">
-    <!--[if lte IE 8]>
+  <!-- endbuild -->
+  <base href="/"></base>
+</head>
+
+<body ng-app="nowaInnowacjaApp" style="height: 100%;" ng-cloak>
+  <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
+  <!-- Add your site or application content here -->
 
 
 
@@ -38,86 +42,90 @@
 
 
 
-    <navbar></navbar>
-    <side-buttons></side-buttons>
+  <navbar></navbar>
+  <side-buttons></side-buttons>
 
 
 
-    <div class="container-fluid">
-    <div ng-view=""></div>
-    </div>
-<!-- 
+  <div class="container-fluid">
+    <div class="animated fadeIn" ng-view=""></div>
+  </div>
+  <!-- 
     <div class="footer" style="position:absolute; bottom:0;"> 
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> Polish Blockchain Wiki</p>
       </div>
     </div> -->
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-                    <p class="copyright text-muted">Copyright &copy; Polish Blockchain Wiki 2018</p>
-                </div>
-            </div>
+          <p class="copyright text-muted">Copyright &copy; Polish Blockchain Wiki 2018</p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    ! function (A, n, g, u, l, a, r) {
+      A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+          (A[l].q = A[l].q || []).push(arguments)
+        }, A[l].l = +new Date, a = n.createElement(g),
+        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/jshashes/hashes.js"></script>
-    <script src="bower_components/angular-timeline/dist/angular-timeline.js"></script>
-    <!-- endbower  -->
-    <!-- endbuild  -->
+  </script>
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/blockchain.js"></script>
-        <script src="scripts/controllers/basics.js"></script>
-        <script src="scripts/controllers/hashPuzzle.js"></script>
-        <script src="scripts/controllers/hashing.js"></script>
-        <script src="scripts/controllers/identification.js"></script>
-        <script src="scripts/controllers/authorization.js"></script>
-        <script src="scripts/controllers/rebase.js"></script>
-        <script src="scripts/controllers/proofofwork.js"></script>
-        <script src="scripts/controllers/comparing.js"></script>
-        <script src="scripts/controllers/choosinghistory.js"></script>
-        <script src="scripts/controllers/payingforintegrity.js"></script>
-        <script src="scripts/controllers/demo.js"></script>
-        <script src="scripts/controllers/restrictions.js"></script>
-        <script src="scripts/controllers/navbar.js"></script>
-        <script src="scripts/controllers/sideButtons.js"></script>
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/jshashes/hashes.js"></script>
+  <script src="bower_components/angular-timeline/dist/angular-timeline.js"></script>
+  <!-- endbower  -->
+  <!-- endbuild  -->
 
-        <script src="scripts/components/navbar.js"></script>
-        <script src="scripts/components/sideButtons.js"></script>
-        <script src="scripts/services/fetchdata.js"></script>
-        <script src="scripts/services/blocks.js"></script>
-        <!-- endbuild -->
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/blockchain.js"></script>
+  <script src="scripts/controllers/basics.js"></script>
+  <script src="scripts/controllers/hashPuzzle.js"></script>
+  <script src="scripts/controllers/hashing.js"></script>
+  <script src="scripts/controllers/identification.js"></script>
+  <script src="scripts/controllers/authorization.js"></script>
+  <script src="scripts/controllers/rebase.js"></script>
+  <script src="scripts/controllers/proofofwork.js"></script>
+  <script src="scripts/controllers/comparing.js"></script>
+  <script src="scripts/controllers/choosinghistory.js"></script>
+  <script src="scripts/controllers/payingforintegrity.js"></script>
+  <script src="scripts/controllers/demo.js"></script>
+  <script src="scripts/controllers/restrictions.js"></script>
+  <script src="scripts/controllers/navbar.js"></script>
+  <script src="scripts/controllers/sideButtons.js"></script>
+
+  <script src="scripts/components/navbar.js"></script>
+  <script src="scripts/components/sideButtons.js"></script>
+  <script src="scripts/services/fetchdata.js"></script>
+  <script src="scripts/services/blocks.js"></script>
+  <!-- endbuild -->
 
 </body>
+
 </html>
