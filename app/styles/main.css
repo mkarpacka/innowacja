@@ -16,28 +16,6 @@ body {
   background: #fcfcfc; 
 }
 
-.content {
-  font-size: 100px;
-  position: relative;
-    -webkit-animation-name: example; 
-    -webkit-animation-duration: 3s;    
-    -webkit-animation-delay: 2s; 
-    -webkit-animation-fill-mode: both; 
-    animation-name: example;
-    animation-duration: 3s;    
-    animation-delay: 1s;
-    animation-fill-mode: both;
-}
-
-@-webkit-keyframes example {
-  from {top: -300px}
-  to {top: -100px}
-}
-
-@keyframes example {
-  from {top: -300px}
-  to {top: -100px}
-}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -88,6 +66,31 @@ body {
 .marketing p + h4 {
   margin-top: 28px;
 }
+
+/*Title movement*/
+.content {
+  font-size: 100px;
+  position: relative;
+    -webkit-animation-name: title; 
+    -webkit-animation-duration: 3s;    
+    -webkit-animation-delay: 2s; 
+    -webkit-animation-fill-mode: both; 
+    animation-name: title;
+    animation-duration: 3s;    
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes title {
+  from {top: -300px}
+  to {top: -100px}
+}
+
+@keyframes title {
+  from {top: -300px}
+  to {top: -100px}
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
