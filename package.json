@@ -33,6 +33,7 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "jshashes": "^1.0.7"
+    "jshashes": "^1.0.7",
+    "nodejs": "0.0.0"
   }
 }

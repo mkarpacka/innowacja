@@ -12,51 +12,41 @@ angular.module('nowaInnowacjaApp')
     $scope.texts = [{
       badgeClass: 'info',
       badgeIconClass: ' glyphicon-globe',
-      title: 'Digital',
-      content: `All information on Blokchain is digitalized, 
-                eliminating the need for manual documentation.`
+      title: 'W postaci cyfrowej',
+      content: `Wszystkie informacje na temat Blockchain są przetwarzane w postać cyfrową, co eliminuje potrzebę ręcznej dokumentacji.`
     }, 
     {
       badgeClass: 'warning',
       badgeIconClass: 'glyphicon-time',
-      title: 'Chronological and time-stamped',
-      content: `Blokchain as the name suggests is a chain of
-                blocks - each being a repository that stores 
-                infromation pertaining to a transaction and 
-                also links to the previous block in the same transaction.
-                These connected blocks form a chronological chain prociding 
-                a trail of the underlaying transaction. `
+      title: 'Chronologiczny i datowany',
+      
+      content: `Blockchain tak jak sugeruje sama nazwa, jest łańcuchem bloków - każdy będący repozytorium, 
+      które przechowuje informacje dotyczące tranzakcji a także wskazuje na poprzedni blok w tej samej tranzakcji.
+      Te połączone bloki tworzą chronologiczny łańcuch przedstawiający ślad pod którym kryje się transakcja. `
     },
     {
       badgeClass: 'danger',
       badgeIconClass: 'glyphicon-floppy-saved',
-      title: 'Cryptographically sealed',
-      content: `Blocks created are cryptographically sealed in the chain.
-                This means that it become impossible to delete, edit or 
-                  copy already created blocks and put it on network, therby creating 
-                  true dihgital assets and ensuring a high level of robustness and
-                  trust. Futhermore, the decentralized storage in a Blokchain is known to
-                  be very failure-resistant. Even in the event of the failure of a large
-                  number of network participants, the Blokchain remains available, eliminating the 
-                  single point of failure. Data stored in a Blokchain is immutable. `
+      title: 'Zabezpieczony szyfrem',
+      content: `Utworzone bloki są kryptograficznie zabezpieczone w łańcuchu.
+                          Oznacza to, że wcześniej utworzone bloki są niemożliwe do usunięcia, 
+                          edytowania lub kopiowania i umieszczania ich w sieci. W ten sposób zapewniany jest
+                          wysoki poziom niezawodności i zaufania. Co więcej, brak jednostki centralnej powoduje, że Blockchain jest bardzo odporny na awarie. Nawet w przypadku awarii dotyczącej dużej liczby uczestników sieci, Blokchain pozostaje dostępny, eliminując pojedynczy punkt awarii. Dane przechowywane w Blokchain są niezmienne. `
     },
     {
       badgeClass: 'success',
       badgeIconClass: ' glyphicon-transfer',
-      title: 'Consensus-based',
-      content: `A transaction on Blokchain can be executed only if all
-                the parties on thenetwork unanimously approve it. However, consensus
-                based rules can be altered to
-                suit varoius circumstances.`
+      title: 'Oparty na konsensusie',
+      
+      content: `Tranzakcja w technologii Blockchain może zostać przeprowadzona tylko jeśli wszystkie strony w niej uczesniczące jednogłośnie się na nią zgodzą.
+      Jednakże, zasady konsensusu mogą zostać dostosowane do różnych okoliczności, zależnie od potrzeb.`
     },
     {
       badgeClass: 'info',
       badgeIconClass: ' glyphicon-cloud-download',
-      title: 'Distributed ledger',
-      content: `Indistinguishable copies of all information are ahred on the 
-                Blokchain. Participants independently validate information without a
-                centralized authority. Even if one node fails, the remaining nodes continue 
-                to operate, ensuring no disruption. `
+      title: 'Rejestry rozproszone',
+      content: `W Blockchain wszystkie kopie informacji są nierozróżnialne. Uczesnicy niezależnie sprawdzają poprawność informacji bez scentralizowanej jednostki.
+      Nawet jeśli jeden węzeł ulegnie awarii, działanie pozostałych węzłów będzie kontynuowane bez zakłóceń.`
     }
     ];
   });
