@@ -16,6 +16,29 @@ body {
   background: #fcfcfc; 
 }
 
+.content {
+  font-size: 100px;
+  position: relative;
+    -webkit-animation-name: example; 
+    -webkit-animation-duration: 3s;    
+    -webkit-animation-delay: 2s; 
+    -webkit-animation-fill-mode: both; 
+    animation-name: example;
+    animation-duration: 3s;    
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes example {
+  from {top: -300px}
+  to {top: -100px}
+}
+
+@keyframes example {
+  from {top: -300px}
+  to {top: -100px}
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
