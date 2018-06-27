@@ -5,9 +5,9 @@ app.controller('SideButtonsCtrl', function ($scope, $rootScope, $location) {
 
   $scope.getTransitionInclude = function () {
     if (side === 'left') {
-      return '../styles/slideLeft.css';
-    } else {
       return '../styles/slideRight.css';
+    } else {
+      return '../styles/slideLeft.css';
     }
   }
 
