@@ -9,7 +9,7 @@
  */
 angular.module('nowaInnowacjaApp')
   .controller('AuthorizationCtrl', function ($scope) {
-		var titleEN = 'Autoryzacja1';
+		var titleEN = 'Autoryzacja';
 		var introductionEN = `Jak dotąd dowiedzieliśmy się, 
 		że Blokchain używa publicznych kluczów kryptograficznych jako numerów kont i 
 		wykorzystuje podejście przywatno-publiczne do przesyłania własności pomiędzy kontami.  
