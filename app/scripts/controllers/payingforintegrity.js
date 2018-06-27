@@ -9,71 +9,55 @@
  */
 angular.module('nowaInnowacjaApp')
   .controller('PayingforintegrityCtrl', function ($scope) {
-    var titleEN = 'Paying	for	Integrity';
-    var introductionEN = `Solving the	hash puzzle
-    plays an important role	in achieving and	maintaining	the	integrity	of the system.
-    But	it costs a lot of computational	resources	and, as	a
-    consequence, it	costs	money. For that reason,	it is necessary	to compensate	the
-    nodes	that contribute to the	integrity	of the	system	for	doing	so.	However,
-    throughout the discussion, it	has	been assumed that	the	nodes	are	compensated
-    somehow	without	asking	which	instrument of payment	is used	to do. `;
+    var titleEN = 'Opłata za podtrzymanie sieci';
+    /**/
+    var introductionEN = `Rozwiązywanie hash puzzle odgrywa znaczącą rolę w osiąganiu i utrzymywaniu nienaruszalności sieci.
+    Kosztuje to jednak wiele zasobów obliczeniowch, a co za tym idzie pieniędzy. Z tego powodu
+    konieczne jest zrekompensowanie węzłów, które przyczyniają się do integralności systemu.
+    Jednak podczas dyskusji przyjęto, że węzły są kompensowane bez pytania o to, który 
+    instrument płatniczy jest do tego używany.`;
     var elementsEN = [
       {
-        title: 'The	Role of Fees Within the	Blockchain',
-        content: `The	blockchain utilizes	the	carrot-and-stick	approach	in
-        order	to get	the	peers	that make up	the	system	control	one	another.
-        Reward and punishment are implemented with rewards based on transaction fees	and	proof of work. This	effect is universal in
-        all blockchain applications regardless of their concrete application goal.However, the choice of a concrete instrument of payment used to compensate	the  maintainers of the system is	not	identical	in	all blockchain	applications. Defining and using an instrument of payment that will	be given	to the peers for verifying and
-        adding new blocks	to the blockchain is	considered one of the major challenges in establishing a blockchain application. `,
+        title: 'Rola opłat w Blockchain',
+        content: `Blockchain wykorzystuje metodę kija i marchewki aby użytkownicy tworzący system wzajemnie się pilnowali. 
+        Nagrody i kary są wdrożone z nagrodami opartymi na opłatach transakcyjnych i algorytmie PoW (proof of work). Efekt ten jest uniwersalny we wszystkich zastosowaniach typu blockchain, niezależnie 
+        od ich konkretnego celu aplikacji. Jednak wybór konkretnej metody płatności służącej nagrodzić użytkowników utrzymujących poprawne działanie systemu nie jest identyczny we wszystkich zastosowaniach typu blockchain. 
+        Definiowanie i używanie instrumentu płatności, który zostanie przekazany partnerom w celu weryfikacji i dodanie nowych bloków do łańcucha blokowego jest uważane za jedno z głównych wyzwań przy tworzeniu aplikacji blockchain.  `,
         id: '1'
+        /* */
       },
       {
-        title: 'Impact on the	Integrity	of the	System',
-        content: `The	forces of reward and punishment are the foundation of achieving and maintaining integrity in the blockchain.
-        This works because the peers of the system receive a valuable compensation for maintaining the integrity of the system.
-        Lack of trust in the instrument of payment used to compensate the peers of the system will contaminate the whole system.
-        Hence, the instrument of payment used for compensating the supporters of the system directly impacts the trustworthiness
-        of the blockchain itself.`,
+        title: 'Wpływ na integralność systemu',
+        content: `Siły nagrody i kary są podstawą osiągnięcia i utrzymania integralności w blockchain. Takie działanie ma sens, ponieważ użytkownicy systemu otrzymują wynagrodzenie za utrzymanie integralności systemu. 
+        Brak zaufania do instrumentu płatniczego służącego do nagradzania użytkowników w systemie spowoduje zanieczyszczenie całego systemu. W związku z tym instrument płatności stosowany do nagradzania 
+        zwolenników systemu ma bezpośredni wpływ na wiarygodność samego bloku blockchain.`,
         id: '2'
       },
       {
-        title: 'Impact	on	the	Openness	of	the	System',
-        content: `Blockchain is to be an open peer-to-peer system. Everyone can
-        connect your computer to the system and will be rewarded for the contribution
-        to maintain integrity. But what will happen if the instrument
-        the payment used to compensate for peers is not as open as the block itself? What
-        if the compensation is made using an available payment instrument
-        or accepted only in certain countries or subject to the movement of capital
-        restrictions? In this case, the payment instrument counteracts the technique
-        system openness by calling economic constraints.`,
+        title: 'Wpływ na otwartość systemu',
+        content: `Blockchain ma być otwartym systemem peer-to-peer. Każdy może podłączyć komputer do systemu i zostanie nagrodzony za wkład w utrzymanie integralności. Ale co się stanie, jeśli instrument, 
+        którego płatność służy do nagradzania hostów, nie jest tak otwarty jak sam blok? Co się stanie, jeśli nagroda zostanie przyznana przy użyciu dostępnego instrumentu płatniczego lub zaakceptowana 
+        tylko w niektórych 
+        krajach lub z zastrzeżeniem ograniczenia kapitału? W tym przypadku instrument płatniczy przeciwdziała otwartości systemu technicznego, wywołując ograniczenia ekonomiczne.`,
         id: '3'
       },
       {
-        title: 'Impact on the	Distributed	Nature of the	System',
-        content: `The	blockchain is a purely distributed peer-to-peer system without any element
-        of central	control or	coordination. But  if	the	instrument of
-        payment	used to compensate peers is	controlled and	governed	by one central
-        institution. This means allowing centrality to enter the system through the back door.
-        It would counteract the distributed nature of the system.`,
+        title: 'Wpływ na rozproszoną naturę systemu',
+        content: `Blockchain jest całkowicie rozproszonym systemem peer-to-peer bez żadnego elementu centralnej kontroli. Jeśli jednak 
+        instrument płatności używany do nagradzania użytkowników utrzymujących poprawne działanie systemu jest kontrolowany i zarządzany przez jedną centralną instytucję. 
+        Tworzy to ukryty sposób dostępu do systemu przeciwdziałający rozproszonemy charakterowi systemu.`,
         id: '4'
       },
       {
-        title: 'Desirable	Properties of	an Instrument	of Payment for Compensating	Peers',
-        content: `The first and most prominent blockchain	application	was	formed to solve the problem.
-        The	idea of that blockchain	is brilliant: It is a	purely
-        distributed	peer-to-peer system	that manages ownership of	a	new	kind of	digital
-        money, which, in turn, is	used to	compensate the peers of the	system for
-        verifying	and	adding new blocks to the	blockchain-data-structure. This particular
-        new	money	connects its application goal, the management of	ownership	of	a
-        new	kind of money, with	the	need to	have a trustworthy	instrument	of	payment
-        for	compensating its contributors. The Bitcoin
-        system not only manages ownership of the new digital money in	a	purely
-        distributed	peer-to-peer system	but it also	compensates	its	peers	with the	money
-        to whose	integrity	they contribute. Due to	the	fact that the	blockchain relies
-        heavily	on cryptography,	this new kind	of money	is also called cryptographic
-        money	or cryptocurrency for short.
+        title: 'Pożądane właściwości instrumentu płatności dla równych sobie użytkowników',
+        content: `Pierwsza i najbardziej znacząca aplikacja typu blockchain została stworzona, aby rozwiązać problem. Idea tego blockchaina jest genialna: jest to całkowicie rozproszony system peer-to-peer, 
+        który zarządza prawem własności do nowego rodzaju pieniędzy cyfrowych, który z kolei jest wykorzystywany do nagradzania użytkowników systemu za weryfikację i dodawanie nowych bloków do struktury danych blockchain. 
+        Ta nowość łączy w sobie cel aplikacji, zarządzanie prawem własności do nowego rodzaju pieniądza, jednocześnie posiadając godny zaufania instrument płatności nagradzający jego współtwórców. 
+        System Bitcoin nie tylko zarządza własnymi pieniędzmi cyfrowymi w czysto rozproszonym systemie peer-to-peer, ale także podarowuje mającym wkład w tworzenie systemu użytkownikom pieniądze. 
+        Ze względu na fakt, że blockchain w dużym stopniu opiera się na kryptografii, ten nowy rodzaj pieniądza nazywany jest kryptograficzną walutą lub w skrócie kryptowalutą.
         `,
         id: '5'
+        
       },
     ]
     $scope.title = titleEN;

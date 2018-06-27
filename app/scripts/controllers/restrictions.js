@@ -49,17 +49,13 @@ angular.module('nowaInnowacjaApp')
       },
       {
         title: 'Ogromny rozmiar',
-        content: `The robustness against manipulations and hence the trustworthiness of the
-        collectively maintained history of transaction data rely on the assumption that
-        the majority of the system’s computational power is controlled by honest nodes.
-        However, in small peer-to-peer systems with a limited computational power, that
-        majority can still be very small, which in turn could make it possible to perform
-        a 51 percent attack. This problem is in particularly relevant for cryptocurrencies
-        with low market capitalization and limited user adoption. Hence, any blockchain
-        will require a critical mass of honest nodes to support it and make it resistant to
-        attackers with a lot of computational power. Reaching a critical size that makes
-        51 percent attacks impossible is a challenge that every new blockchain has to
-        face.`,
+        content: `Wytrzymałość na manipulacje, a tym samym wiarygodność zbiorowo utrzymywanej historii danych transakcji 
+        opiera się na założeniu, że większość mocy obliczeniowej systemu kontrolowana jest przez poprawnie działające węzły. 
+        Jednak w małych systemach peer-to-peer z ograniczoną mocą obliczeniową, ta większość nadal może być bardzo mała, co z 
+        kolei może umożliwić wykonanie 51-procentowego ataku. Ten problem jest szczególnie istotny w przypadku kryptowalut o niskiej kapitalizacji 
+        rynkowej i ograniczonej akceptacji użytkowników. Stąd każdy blockchain będzie wymagał ogromnej ilości hostów działających z protokołem, 
+        aby ją wspierać i uczynić ją odporną atakujący z dużą mocą obliczeniową. Osiągnięcie krytycznego rozmiaru, który sprawia 51 procent ataków 
+        niemożliwe jest wyzwaniem, z którym każny nowy blockchain musi się zmierzyć.`,
         id: '5'
       },
     ]
