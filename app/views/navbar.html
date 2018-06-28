@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../styles/navbar.css">
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+<!-- <nav class="navbar navbar-default navbar-custom navbar-fixed-top" id="navbar">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
+
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -11,7 +11,6 @@
       <a class="navbar-brand" href="index.html">Polish blockchain wiki</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -49,7 +48,62 @@
 
       </ul>
     </div>
-    <!-- /.navbar-collapse -->
+
   </div>
-  <!-- /.container -->
+
+</nav> -->
+
+<nav class="navbar navbar-fixed-top stick" id="navbar">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand" href="#" id="brand">Polish blockchain wiki</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#/authorization">Autoryzacja</a>
+        </li>
+        <li>
+          <a href="#/demo">Demo</a>
+        </li>
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hashing
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#/comparing">Przykład użycia funkcji haszujących</a>
+            </li>
+            <li>
+              <a href="#/hashPuzzle">Hashing puzzle</a>
+            </li>
+            <li>
+              <a href="#/hashing">Fukncje skrótu</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#/identification">Identyfikacja</a>
+        </li>
+        <li>
+          <a href="#/payingForIntegrity">Opłata za podtrzymanie sieci</a>
+        </li>
+        <li>
+          <a href="#/restrictions">Ograniczenia</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <!-- /.container-fluid -->
 </nav>
+
+<script src="../scripts/navbar.js"></script>

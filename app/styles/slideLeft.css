@@ -1,28 +1,28 @@
-@-webkit-keyframes moveToLeftFade {
-	from { }
-	to { opacity: 0.3; -webkit-transform: translateX(-100%); }
+@-webkit-keyframes moveFromLeftFade {
+	from { opacity: 0.3; -webkit-transform: translateX(-100%); }
 }
-@keyframes moveToLeftFade {
-	from { }
-	to { opacity: 0.3; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+@keyframes moveFromLeftFade {
+	from { opacity: 0.3; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
 }
 
-@-webkit-keyframes moveFromRightFade {
-	from { opacity: 0.3; -webkit-transform: translateX(100%); }
+@-webkit-keyframes moveToRightFade {
+	from { }
+	to { opacity: 0.3; -webkit-transform: translateX(100%); }
 }
-@keyframes moveFromRightFade {
-	from { opacity: 0.3; -webkit-transform: translateX(100%); transform: translateX(100%); }
+@keyframes moveToRightFade {
+	from { }
+	to { opacity: 0.3; -webkit-transform: translateX(100%); transform: translateX(100%); }
 }
 
 .ng-enter {
-  -webkit-animation: moveFromRightFade .3s ease both;
-  animation: moveFromRightFade .3s ease both;
+  -webkit-animation: moveFromLeftFade .3s ease both;
+  animation: moveFromLeftFade .3s ease both;
   z-index: 9999;
 }
 
 
 .ng-leave {
-  -webkit-animation: moveToLeftFade .3s ease both;
-  animation: moveToLeftFade .3s ease both;
+  -webkit-animation: moveToRightFade .3s ease both;
+  animation: moveToRightFade .3s ease both;
   z-index: 8888;
 }
