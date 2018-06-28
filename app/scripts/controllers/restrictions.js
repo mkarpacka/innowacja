@@ -9,68 +9,53 @@
  */
 angular.module('nowaInnowacjaApp')
   .controller('RestrictionsCtrl', function ($scope) {
-    var titleEN = 'Restrictions';
-    var introductionEN = `Previous pages brought all the pieces together and yielded an overview of the
-    blockchain as a whole, highlighting the interdependency of its underlying
-    technical concepts. As a result, we concluded that the blockchain is a complex
-    and highly sophisticated technical construct. However, the blockchain is
-    neither perfect nor free of limitations.
-    These are most important limitations of the blockchain`;
+    var titleEN = 'Ograniczenia';
+
+    var introductionEN = `Poprzednie strony połączyły wszystkie elementy układanki i dały możliwość zrozumienia czym jest Blockchain, podkreślając niezależność jego koncepcji technicznych.
+    Blockchain jest złożony i posiada wysoce zaawansowaną konstrukcję. Mimo to nie jest doskonały ani wolny od ograniczeń. Oto jego najważniejsze ograniczenia: `;
     var elementsEN = [
       {
-        title: 'Lack of Privacy',
-        content: `The blockchain is a purely distributed peer-to-peer ledger that maintains the
-        whole history of transaction data. All transaction details such as the goods and
-        the amount being transferred, the involved accounts, and the time of transfer are
-        accessible to everyone.1 This is necessary in order to allow every peer to clarify
-        ownership and to verify new transactions (e.g., by identifying double-spending
-        attacks). Hence, the lack of privacy is a constituting element of the blockchain.`,
+        title: 'Brak prywatności',
+        content: `Blockchain jest zdecentralizowaną i rozproszoną bazą danych o architekturze peer-to-peer, która przechowuje dane poszczególnych tranzakcji.
+        Wszystkie szczegóły tranzakcji takie jak rodzaj i wartość towarów, uczestniczące konta oraz czas tranzakcji są dostępne dla wszystkich.
+        Jest to konieczne aby umożliwić każdemu użytkownikowi zweryfikowanie tranzakcji. Przez to brak prywatności jest nieodłącznym elementem tej technologii.`,
         id: '1'
       },
       {
-        title: 'The Security Model',
-        content: `The blockchain utilizes asymmetric cryptography for identification,
-        authentication of users, and for authorizing transactions. Account numbers in the
-        blockchain are actually public cryptographic keys.
-        The private key is the only security instrument that
-        authorizes the lawful owner. As soon as the private key of an account is given to
-        some else, either on purpose, by accident, by mistake, or due to data robbery, the
-        security for that individual account is broken.`,
+        title: 'Model bezpieczeństwa',
+        content: `Blockchain wykorzystuje asymetryczną kryptografię do identyfikacji, uwierzytelniania
+        użytkowników i autoryzowania transakcji. Numery kont w blockchain są w rzeczywistości publicznymi
+        kluczami kryptograficznymi. Klucz prywatny to jedyny instrument bezpieczeństwa, który potwierdza tożsamość właściciela.
+        W momencie przekazania klucza prywatnego konta do kogoś innego, celowo, przez przypadek, przez pomyłkę lub w wyniku kradzieży danych, ochrona tego konkretnego konta zostaje złamana.`,
         id: '2'
       },
       {
-        title: 'High Costs',
-        content: `Solving the hash puzzle or providing the proof of work is computationally expensive on
-        purpose. It is the security measure that makes the history of transaction data
-        immutable. The computational costs can be expressed in a variety of scales such
-        as the number of computational cycles, physical time, electrical energy, and
-        money. However, the result is always the same: The proof of work is expensive.
-        Hence, the whole blockchain incurs costs. The magnitude of these costs depends
-        on the difficulty of the hash puzzles.`,
+        title: 'Wysokie koszty',
+        content: `Rozwiązanie hashing puzzle oraz algorytmu PoW (proof of work) jest celowo kosztowne pod względem obliczeniowym.
+        Jest to środek bezpieczeństwa, który gwarantuje niezmienność historii danych transakcji.
+        Koszty obliczeniowe mogą być wyrażone w różnych skalach jako liczba cykli obliczeniowych, czasu fizycznego,
+        energii elektrycznej i pieniądzy. Jednak wynik jest zawsze taki sam: PoW jest kosztowny. W związku z tym cały blockchain ponosi koszty.
+        Wielkość tych kosztów zależy od trudności hashing puzzle.`,
         id: '3'
       },
       {
-        title: 'Lack of Flexibility',
-        content: `The blockchain is a complex technical construct that consists of a variety of
-        concepts and protocols that are optimized and adopted to one another. Changing
-        that fine-tuned ecosystem can be very challenging. Actually, there is no
-        established procedure for how to change or upgrade major components of a
-        blockchain once it has started its operation.`,
+        title: 'Niewystarczająca elastyczność',
+        content: `Blockchain jest złożoną konstrukcją techniczną, która składa się z wielu różnych koncepcji i
+        protokołów, które są zoptymalizowane i dostosowane do siebie. Wymiana pieniędzy w tym dopracowanym
+        ekosystemie może być bardzo trudna. W rzeczywistości nie ma ustanowionej procedury
+        dotyczącej zmiany lub aktualizacji głównych składników kiedy Blockchain rozpocznie swoją operację.`,
+
         id: '4'
       },
       {
-        title: 'Critical Size',
-        content: `The robustness against manipulations and hence the trustworthiness of the
-        collectively maintained history of transaction data rely on the assumption that
-        the majority of the system’s computational power is controlled by honest nodes.
-        However, in small peer-to-peer systems with a limited computational power, that
-        majority can still be very small, which in turn could make it possible to perform
-        a 51 percent attack. This problem is in particularly relevant for cryptocurrencies
-        with low market capitalization and limited user adoption. Hence, any blockchain
-        will require a critical mass of honest nodes to support it and make it resistant to
-        attackers with a lot of computational power. Reaching a critical size that makes
-        51 percent attacks impossible is a challenge that every new blockchain has to
-        face.`,
+        title: 'Ogromny rozmiar',
+        content: `Wytrzymałość na manipulacje, a tym samym wiarygodność zbiorowo utrzymywanej historii danych transakcji
+        opiera się na założeniu, że większość mocy obliczeniowej systemu kontrolowana jest przez poprawnie działające węzły.
+        Jednak w małych systemach peer-to-peer z ograniczoną mocą obliczeniową, ta większość nadal może być bardzo mała, co z
+        kolei może umożliwić wykonanie 51-procentowego ataku. Ten problem jest szczególnie istotny w przypadku kryptowalut o niskiej kapitalizacji
+        rynkowej i ograniczonej akceptacji użytkowników. Stąd każdy blockchain będzie wymagał ogromnej ilości hostów działających z protokołem,
+        aby ją wspierać i uczynić ją odporną atakujący z dużą mocą obliczeniową. Osiągnięcie krytycznego rozmiaru, który sprawia 51 procent ataków
+        niemożliwe jest wyzwaniem, z którym każny nowy blockchain musi się zmierzyć.`,
         id: '5'
       },
     ]
