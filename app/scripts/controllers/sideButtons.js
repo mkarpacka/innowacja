@@ -3,12 +3,13 @@ app.controller('SideButtonsCtrl', function ($scope, $rootScope, $location) {
 
   var side = 'left';
 
+  $scope.nextUrl = '#/authorization';
+  $scope.prevUrl = '#/restrictions';
+
   $scope.getTransitionInclude = function () {
-    if (side === 'left') {
-      return '../styles/slideRight.css';
-    } else {
-      return '../styles/slideLeft.css';
-    }
+    return side === 'left' ? '../styles/slideLeft.css'
+      :'../styles/slideRight.css';
+  
   }
 
   $scope.setLeftSide = function () {
@@ -17,22 +18,23 @@ app.controller('SideButtonsCtrl', function ($scope, $rootScope, $location) {
 
   $scope.setRightSide = function () {
     side = 'right';
+    console.log($scope.nextUrl);
   }
 
 
   $rootScope.$on('$routeChangeStart', function () {
     switch ($location.path()) {
       case '/':
-        $scope.nextUrl = '#/about';
+        $scope.nextUrl = '#/authorization';
         $scope.prevUrl = '#/restrictions';
         break;
-      case '/about':
-        $scope.nextUrl = '#/authorization';
-        $scope.prevUrl = '#/';
-        break;
+      // case '/about':
+      //   $scope.nextUrl = '#/authorization';
+      //   $scope.prevUrl = '#/';
+      //   break;
       case '/authorization':
         $scope.nextUrl = '#/demo';
-        $scope.prevUrl = '#/about';
+        $scope.prevUrl = '#/';
         break;
       case '/demo':
         $scope.nextUrl = '#/comparing';
