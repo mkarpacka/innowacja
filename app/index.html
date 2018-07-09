@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,15 +6,11 @@
   <title>Polish Blockchain Wiki</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <!-- build:css(.) styles/vendor.css -->
-  <!-- bower:css -->
+
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="bower_components/angular-timeline/dist/angular-timeline.css" />
   <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
-  <!-- endbower -->
-  <!-- endbuild -->
-  <!-- build:css(.tmp) styles/main.css -->
+
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/transitions.css">
   <link rel="stylesheet" href="styles/animations.css">
@@ -37,41 +33,43 @@
   <base href="/"></base>
 </head>
 
-<body ng-app="nowaInnowacjaApp" ng-cloak>
-<body ng-app="nowaInnowacjaApp">
-  <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-  <!-- Add your site or application content here -->
 
 
+<body ng-app="nowaInnowacjaApp" ng-cloak style="margin: 0;">
+  <div class="wrapper">
 
 
+    <navbar></navbar>
+    
+    <side-buttons></side-buttons>
+
+  
+    <div class="container-fluid " style="padding-right: 0px; padding-left: 0px; margin-bottom: 100px;">
+      <div ng-view=""></div>
+    </div>
 
 
-
-
-
-  <navbar></navbar>
-  <side-buttons></side-buttons>
-
-
-
-  <div class="container-fluid " style="padding-right: 0px; padding-left: 0px; margin-bottom: 100px;">
-    <div ng-view=""></div>
+    <div class="push"></div>
+    
   </div>
-  <!-- 
-    <div class="footer" style="position:absolute; bottom:0;"> 
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> Polish Blockchain Wiki</p>
-      </div>
-    </div> -->
 
 
-  <ng-include  src="'views/partials/footer.html'"></ng-include>
+  <div class="stickyFooter">
+      <ng-include  src="'views/partials/footer.html'"></ng-include>
+  </div>
 
-  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

@@ -20,3 +20,15 @@
     transform: translate(-50%, -50%);
     color: whitesmoke;
 }
+
+
+ .wrapper
+{
+    min-height: calc(100vh - 70px);
+}
+
+.stickyFooter
+{
+    height: 50px;
+    margin-top: -50px;
+} 
